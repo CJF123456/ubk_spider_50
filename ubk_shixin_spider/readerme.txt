@@ -1,0 +1,6 @@
+name:失信人员、企业名单采集系统
+author:chenjianfeng
+remarks:
+		通过百度失信人员名单作为采集源 https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=6899&query=%E5%A4%B1%E4%BF%A1%E8%A2%AB%E6%89%A7%E8%A1%8C%E4%BA%BA%E5%90%8D%E5%8D%95%E6%9F%A5%E8%AF%A2&pn=10&rn=10&ie=utf-8&oe=utf-8&format=json&t=1448005865006&cb=jQuery110203433753933001139_1448005842455&_=1448005842458
+		每天自增采集最新信息并入库
+		展示系统：http://localhost:8088/ubk_shixin/
