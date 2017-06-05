@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE configuration   
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="SQLAdapter" type="com.unbank.mybatis.entity.SQLAdapter" />
+		<typeAlias alias="DataModel" type="com.unbank.mybatis.entity.DataModel" />
+		<typeAlias alias="TreeModel" type="com.unbank.mybatis.entity.TreeModel" />
+
+	</typeAliases>
+	<!--数据源配置 这块用 BD2数据库 -->
+	<environments default="development">
+		<!--采集数据库 -->
+		<environment id="development">
+			<transactionManager type="jdbc" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://10.0.0.51:3306/statsbdata?allowMultiQueries=true" />
+				<property name="username" value="spider" />
+				<property name="password" value="spider" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!--userMapper.xml装载进来 同等于把“dao”的实现装载进来 -->
+		<mapper resource="com/unbank/mybatis/mapper/SQLAdapterMapper.xml" />
+		<mapper resource="com/unbank/mybatis/mapper/TreeModelMapper.xml" />
+		<mapper resource="com/unbank/mybatis/mapper/DataModelMapper.xml" />
+		<!-- 添加更新时间 -->
+		<mapper resource="com/unbank/mybatis/mapper/QuDataMapper.xml" />
+		<!-- 添加FileMapModel -->
+		<mapper resource="com/unbank/mybatis/mapper/MapFileModelMapper.xml" />
+
+	</mappers>
+</configuration> 

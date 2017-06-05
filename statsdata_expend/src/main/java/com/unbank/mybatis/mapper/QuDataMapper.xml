@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.unbank.mybatis.mapper.QuDataMapper" >
+  
+  <!-- 统计局区域年最大 -->
+  <select id="getNBSqMaxYear" resultType="java.util.Map">
+  SELECT
+		MAX(a.date_year_int) AS date_year_int,
+		1 AS date_month_int,
+		a.sub_id
+	FROM
+		region_year_data_temp a
+	JOIN region_datafield_year_temp b ON a.sub_id = b.id
+	GROUP BY
+		a.sub_id
+  </select>
+  <!-- 统计局区域年最小 -->
+   <select id="getNBSqMinYear" resultType="java.util.Map">
+	SELECT
+		MIN(a.date_year_int) AS date_year_int,
+		1 AS date_month_int,
+		a.sub_id
+	FROM
+		region_year_data_temp a
+	JOIN region_datafield_year_temp b ON a.sub_id = b.id
+	GROUP BY
+		a.sub_id
+  </select>
+  <!-- 统计局区域季度 最大-->
+    <select id="getNBSqMaxQuarter" resultType="java.util.Map">
+   	SELECT MAX(c.date_month_int) AS date_month_int, d.maxyear as date_year_int ,c.sub_id FROM region_quarter_data_temp c JOIN (SELECT MAX(a.date_year_int) AS maxyear , a.sub_id FROM region_quarter_data_temp a JOIN region_datafield_quarter_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.maxyear ) GROUP BY c.sub_id  
+  </select>
+  <!-- 统计局区域季度 最小-->
+  <select id="getNBSqMinQuarter" resultType="java.util.Map">
+  	SELECT MIN(c.date_month_int) AS date_month_int,d.minyear AS date_year_int,c.sub_id FROM region_quarter_data_temp c JOIN (SELECT MIN(a.date_year_int) AS minyear,a.sub_id FROM region_quarter_data_temp a JOIN region_datafield_quarter_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d ON (c.sub_id = d.sub_id AND c.date_year_int = d.minyear ) GROUP BY c.sub_id
+  </select>
+  <!-- 统计局区域月最小 -->
+  <select id="getNBSqMinMonth" resultType="java.util.Map">
+  	 SELECT MIN(c.date_month_int) AS date_month_int, d.minyear as date_year_int ,c.sub_id FROM region_month_data_temp c JOIN (SELECT MIN(a.date_year_int) AS minyear , a.sub_id FROM region_month_data_temp a JOIN region_datafield_month_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.minyear ) GROUP BY c.sub_id  
+  </select>
+  <!-- 统计局区域月最大 -->
+  <select id="getNBSqMaxMonth" resultType="java.util.Map">
+     SELECT MAX(c.date_month_int) AS date_month_int, d.maxyear as date_year_int ,c.sub_id FROM region_month_data_temp c JOIN (SELECT MAX(a.date_year_int) AS maxyear , a.sub_id FROM region_month_data_temp a JOIN region_datafield_month_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.maxyear ) GROUP BY c.sub_id  
+  </select>
+  <!-- 统计局国家年最小 -->
+    <select id="getNBSMinYear" resultType="java.util.Map">
+	SELECT
+		MIN(a.date_year_int) AS date_year_int,
+		1 AS date_month_int,
+		a.sub_id
+	FROM
+		country_year_data_temp a
+	JOIN country_datafield_year_temp b ON a.sub_id = b.id
+	GROUP BY
+		a.sub_id
+  </select>
+  <!-- 统计局国家年最大 -->
+    <select id="getNBSMaxYear" resultType="java.util.Map">
+		SELECT
+		MAX(a.date_year_int) AS date_year_int,
+		1 AS date_month_int,
+		a.sub_id
+	FROM
+		country_year_data_temp a
+	JOIN country_datafield_year_temp b ON a.sub_id = b.id
+	GROUP BY
+		a.sub_id
+	
+  </select>
+  <!-- 统计局国家季度最小 -->
+  <select id="getNBSMinQuarter" resultType="java.util.Map">
+  	SELECT MIN(c.date_month_int) AS date_month_int,d.minyear AS date_year_int,c.sub_id FROM country_quarter_data_temp c JOIN (SELECT MIN(a.date_year_int) AS minyear,a.sub_id FROM country_quarter_data_temp a JOIN country_datafield_quarter_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d ON (c.sub_id = d.sub_id AND c.date_year_int = d.minyear ) GROUP BY c.sub_id
+  </select>
+   <!-- 统计局国家季度最大 -->
+  <select id="getNBSMaxQuarter" resultType="java.util.Map">
+   	SELECT MAX(c.date_month_int) AS date_month_int, d.maxyear as date_year_int ,c.sub_id FROM country_quarter_data_temp c JOIN (SELECT MAX(a.date_year_int) AS maxyear , a.sub_id FROM country_quarter_data_temp a JOIN country_datafield_quarter_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.maxyear ) GROUP BY c.sub_id  
+  </select>
+  <!-- 统计局国家月最小 -->
+  <select id="getNBSMinMonth" resultType="java.util.Map">
+  	 SELECT MIN(c.date_month_int) AS date_month_int, d.minyear as date_year_int ,c.sub_id FROM country_month_data_temp c JOIN (SELECT MIN(a.date_year_int) AS minyear , a.sub_id FROM country_month_data_temp a JOIN country_datafield_month_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.minyear ) GROUP BY c.sub_id  
+  </select>
+  <!-- 统计局国家月最大 -->
+  <select id="getNBSMaxMonth" resultType="java.util.Map">
+     SELECT MAX(c.date_month_int) AS date_month_int, d.maxyear as date_year_int ,c.sub_id FROM country_month_data_temp c JOIN (SELECT MAX(a.date_year_int) AS maxyear , a.sub_id FROM country_month_data_temp a JOIN country_datafield_month_temp b ON a.sub_id = b.id GROUP BY a.sub_id) d  ON (c.sub_id = d.sub_id AND c.date_year_int=d.maxyear ) GROUP BY c.sub_id  
+  </select>
+  <update id="newbatchupdateyear" parameterType="java.util.Map">  
+	    UPDATE ${params.table}  SET update_time= CASE id
+	     <foreach close="" collection="params.list" index="index" item="item" open="" separator=" ">
+			WHEN ${item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="newbatchupdatestartyear" parameterType="java.util.Map">  
+	    UPDATE ${params.table} SET start_time= CASE id
+	     <foreach close="" collection="params.list" index="index" item="item" open="" separator=" ">
+			WHEN ${item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+	
+	<!-- kaishi -->
+	 <update id="countryyear" parameterType="java.util.List">  
+	    UPDATE country_datafield_year_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="countryyearstart" parameterType="java.util.List">  
+	    UPDATE country_datafield_year_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  <update id="countryquarter" parameterType="java.util.List">  
+	    UPDATE country_datafield_quarter_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="countryquarterstart" parameterType="java.util.List">  
+	    UPDATE country_datafield_quarter_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+	<update id="countrymonth" parameterType="java.util.List">  
+	    UPDATE country_datafield_month_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="countrymonthstart" parameterType="java.util.List">  
+	    UPDATE country_datafield_month_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+	
+	<update id="regionyear" parameterType="java.util.List">  
+	    UPDATE region_datafield_year_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="regionyearstart" parameterType="java.util.List">  
+	    UPDATE region_datafield_year_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  <update id="regionquarter" parameterType="java.util.List">  
+	    UPDATE region_datafield_quarter_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="regionquarterstart" parameterType="java.util.List">  
+	    UPDATE region_datafield_quarter_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+	<update id="regionmonth" parameterType="java.util.List">  
+	    UPDATE region_datafield_month_temp SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+  
+  
+   <update id="regionmonthstart" parameterType="java.util.List">  
+	    UPDATE region_datafield_month_temp SET start_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END
+	</update>
+	 <update id="initupdateandstarttime">  
+	   UPDATE ${tablename} SET update_time=NULL , start_time=NULL
+	</update>
+	
+	<select id="getData"  resultType="java.util.Map">
+		SELECT MAX(CONCAT_WS('-',date_year,date_month)) AS update_time ,MIN(CONCAT_WS('-',date_year,date_month))  AS start_time  ,a.sub_id FROM ${tablename} a GROUP BY a.sub_id;  
+	</select>
+	<update id="updatetime" >  
+	    UPDATE ${tablename} SET update_time= CASE id
+	     <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.updateTime}	
+	   </foreach>
+	   END,start_time=CASE id
+	   <foreach close="" collection="list" index="index" item="item" open="" separator=" ">
+			WHEN #{item.id} THEN #{item.startTime}	
+	   </foreach>
+	   END
+	</update>
+	
+</mapper>

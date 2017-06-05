@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- quartz -->
+	<!-- 定义任务 -->
+	<bean id="startExpendQuartzJobBean" class="com.unbank.quartz.StartExpendQuartzJobBean">
+		<!-- 间隔时间基数 -->
+		<constructor-arg index="0"
+			value="country_datafield_year,region_datafield_year" />
+		<!-- 重连策略 -->
+		<constructor-arg index="1"
+			value="country_year_data,region_year_data" />
+
+
+	</bean>
+
+	<bean id="startExpendQuartzJobTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject" ref="startExpendQuartzJobBean">
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod" value="executeInternal">
+		</property>
+	</bean>
+	<!-- 任务触发器 -->
+	<bean id="startExpendQuartzTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail">
+			<ref bean="startExpendQuartzJobTask" />
+		</property>
+		<property name="cronExpression">
+			<value>01 32 10 * * ?</value>
+		</property>
+	</bean>
+	<!-- 任务调度入口 -->
+	<bean lazy-init="false"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="startExpendQuartzTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>
