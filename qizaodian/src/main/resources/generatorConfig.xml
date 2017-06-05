@@ -18,6 +18,7 @@
 			targetProject="qizaodian/src/main/java" type="XMLMAPPER" />
 		
 		
+		
 		<table schema="qizaodian" tableName="show_title"
 			domainObjectName="ShowTitle">
 		</table>
