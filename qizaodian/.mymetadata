@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="qizaodian"
+  id="myeclipse.1474426386344"
+  context-root="/qizaodian"
+  j2ee-spec="5.0"
+  archive="qizaodian.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

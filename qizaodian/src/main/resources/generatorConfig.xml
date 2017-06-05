@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+
+		location="E:\maven_jar\repository\mysql\mysql-connector-java\5.1.18\mysql-connector-java-5.1.18.jar" />
+
+	<context id="mysql_context" targetRuntime="MyBatis3">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://43.248.76.16:3306/qizaodian?autoReconnect=true&amp;characterEncoding=UTF-8"
+			userId="root" password="cjf123456" />
+		<javaModelGenerator targetPackage="com.unbank.spider.mybatis.vo"
+			targetProject="qizaodian/src/main/java" />
+		<sqlMapGenerator targetPackage="com.unbank.spider.mybatis.mapper"
+			targetProject="qizaodian/src/main/java" />
+		<javaClientGenerator targetPackage="com.unbank.spider.mybatis.client"
+			targetProject="qizaodian/src/main/java" type="XMLMAPPER" />
+		
+		
+		<table schema="qizaodian" tableName="show_title"
+			domainObjectName="ShowTitle">
+		</table>
+		<table schema="qizaodian" tableName="show_text"
+			domainObjectName="ShowText">
+		</table>
+
+		<table schema="qizaodian" tableName="show_tag"
+			domainObjectName="ShowTag">
+		</table>
+		
+		<table schema="qizaodian" tableName="show_poetry"
+			domainObjectName="ShowPoetry">
+		</table>
+		
+		<table schema="qizaodian" tableName="show_poetry_text"
+			domainObjectName="ShowPoetryText">
+		</table>
+		
+	
+		
+	</context>
+
+</generatorConfiguration>

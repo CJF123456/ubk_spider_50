@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<mappers>
+		<!-- 主页显示展现 -->
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowTitleMapper.xml" />
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowTextMapper.xml" />
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowTagMapper.xml" />
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowTagMapper.xml" />
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowPoetryMapper.xml" />
+		<mapper resource="com/unbank/spider/mybatis/mapper/ShowPoetryTextMapper.xml" />
+		
+	</mappers>
+
+</configuration>  
