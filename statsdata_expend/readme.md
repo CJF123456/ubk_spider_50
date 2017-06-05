@@ -7,7 +7,7 @@
 正式环境
 1.修改mybatis文件 链接10.0.0.16数据库，root 123456
 2.去到 QuartzTask文件中
-         new SendFileByftp().uploadFile("123.56.182.93", 21, "ftpuser",
+         new SendFileByftp().uploadFile("123", 21, "ftpuser",
 			 "ftpuser", "/plugin/hgdata/", tempfile.getName(), input);
 	上传数据到ftp
 3.
