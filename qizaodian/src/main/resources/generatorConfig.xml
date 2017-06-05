@@ -8,8 +8,8 @@
 	<context id="mysql_context" targetRuntime="MyBatis3">
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://43.248.76.16:3306/qizaodian?autoReconnect=true&amp;characterEncoding=UTF-8"
-			userId="root" password="cjf123456" />
+			connectionURL="jdbc:mysql://localhost:3306/qizaodian?autoReconnect=true&amp;characterEncoding=UTF-8"
+			userId="root" password="123456" />
 		<javaModelGenerator targetPackage="com.unbank.spider.mybatis.vo"
 			targetProject="qizaodian/src/main/java" />
 		<sqlMapGenerator targetPackage="com.unbank.spider.mybatis.mapper"
