@@ -1,0 +1,41 @@
+1:拟在建月度任务:【拟在建日报】
+1.1: 需要登录外网服务器或者在其他IP地址，登陆拟在建官网后 点开拟在建信息详情后复制cookice，启动采集bat即可。
+2:拟在建月度任务:【拟在建月度数据】，【拟在建PPP月度数据】
+2.1:拟在建月度数据:
+2.1.1:先去 \ubk_bhi_spider_2017\target\classes\temp 下面 清空此文件夹
+2.1.2:找到task下BhiFengZongExcelxlsMaker.java,修改日期
+         如:String startTime = "2017-03-01";
+	  String endTime = "2017-03-31";
+2.1.3:BhiFengZongExcelxlsMaker 右击run
+2.1.4:去\ubk_bhi_spider_2017\target\classes\temp 下压缩所有文件发给王娟
+
+2.2:拟在建PPP月度数据
+2.2.1:先去 \ubk_bhi_spider_2017\target\classes\temp 下面 清空此文件夹
+2.2.2: 需要配置的时间和cookie 
+           如:
+       public static String startBijiaoTime ="2016/12/01"; 
+       public static String endBijiaoTime = "2016/12/31"; 
+	   headerCookie = "ASPSESSIONIDSCDBACBA=AOJBANHCCJILBEOPLOKGANKG; ASP.NET_SessionId=mjg2zmbclhtpqefydo2ud4ag; CheckCode=898a; LogUser=Xekntzx+bTSFWwbX9a2V7VWapZVMhRwJvTyT5UCmx0t+oKzN8HLVO7NcQDZKhfO0; Hm_lvt_8d994d177d2158b74a6011c3839d1a20=1490950426; Hm_lpvt_8d994d177d2158b74a6011c3839d1a20=1490950445; BHI_BROWSE_STATICS_WIDTH=1920; BHI_BROWSE_STATICS_HEIGHT=1080";
+                     先手动登陆上拟在建， 复制登陆后的Cookie 黏贴上即可 
+2.2.3:再去数据库里截断 bhi_ppp_word，再运行bhipppwordmaker 生成 bhi_ppp_word
+2.2.4:执行BhiPppExcelxlsMaker.java:
+                   需要修改的地方:startBijiaoTime.endBijiaoTime.fileTime
+          * @remark:execl格式是xls格式，是2007版本以下
+                  右击run执行
+                 去\ubk_bhi_spider_2017\target\classes\temp 下压缩所有文件发给王娟 
+2.2.5: 操作完成后去bhi_expend执行第四步 BhiPppWordTask.java
+	//放开ftp:123.56.182.93的注释 右击run
+
+
+
+
+拟在建每日数据如果没有及时采集补救措施:
+1.先给李##拟在建日报，
+找到quartz_spring.xml中startDayReportQuartzTrigger，修改时间String time = getLocalTime(-1);
+2.接着给工行发邮件
+找到quartz_spring.xml中startIcbcEmailQuartzTrigger，修改时间
+String startTime = SimpleTools.getyyyyMMddTimeString(new Date(), -1);
+String endTime = SimpleTools.getyyyyMMddTimeString(new Date(), -1);
+修改收件人信息
+3.启动quartz_spring.xml的中日报和工行邮件的定时
+4.处理stp数据

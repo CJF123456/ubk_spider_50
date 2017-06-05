@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.unbank" />
+	<tx:annotation-driven />
+
+	<bean id="v" class="com.unbank.tools.Values" init-method="init">
+		<property name="SERVERHOST">
+			<value>smtp.163.com</value>
+		</property>
+		<property name="SERVERPORT">
+			<value>25</value>
+		</property>
+		<property name="USERNAME">
+			<value>unbankspider@163.com</value>
+		</property>
+		<property name="PASSWORD">
+			<value>unbank</value>
+		</property>
+		<property name="FROMADDRESS">
+			<value>unbankspider@163.com</value>
+		</property>
+
+		<property name="RECEIVER">
+			<value>1378022176
+			<!-- 674613438@qq.com,543971617@qq.com,mailupgrade@sdc.icbc.com.cn,information@icbc.com.cn,23933854@qq.com -->
+			</value>
+		</property>
+		<property name="SUBJECT">
+			<value>银联信拟在建项目</value>
+		</property>
+		<property name="CONTENT">
+			<value>银联信拟在建项目</value>
+		</property>
+		<property name="PROXYIP">
+			<value>127.0.0.1</value>
+		</property>
+		<property name="PROXYPORT">
+			<value>8787</value>
+		</property>
+		<property name="COOKIE">
+			<value>ASP.NET_SessionId=yscjsjaqess0qwxamsw0b0ao; LogUser=d3UnkM0/zzKrgLd5mN45mvod3ECRbOiFofz1yVplGnU=; Hm_lvt_8d994d177d2158b74a6011c3839d1a20=1472555352,1472642271,1472728639,1472815629; Hm_lpvt_8d994d177d2158b74a6011c3839d1a20=1472815633</value>
+		</property>
+	</bean>
+
+</beans>
