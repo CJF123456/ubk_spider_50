@@ -1,0 +1,128 @@
+2017-03-20 15:03:33 <# com.unbank.UnbankQuartzConsole.<clinit>(UnbankQuartzConsole.java:18)> INFO  [0]:
+---日志系统启动成功---
+2017-03-20 15:03:33 <# org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:456)> INFO  [170]:
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@59690aa4: startup date [Mon Mar 20 15:03:33 CST 2017]; root of context hierarchy
+2017-03-20 15:03:33 <# org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)> INFO  [339]:
+Loading XML bean definitions from class path resource [applicationContext.xml]
+2017-03-20 15:03:34 <# org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:315)> INFO  [1139]:
+Loading XML bean definitions from class path resource [quartz_spring.xml]
+2017-03-20 15:03:34 <# org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:555)> INFO  [1631]:
+Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5e853265: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,cn100ec,cn21food,cnAfinance,cnCcstock,cnCe,cnCeWWW,cnCfi,cnChinafund,cnCinn,cnCnpawn,cnCnr,cnCnrcb,cnCom10jqka,cnComAgri,cnComAutohome,cnComBjx,cnComCb,cnComCebnet,cnComCena,cnComCet,cnComChina,cnComChina2,cnComChinabond,cnComChinadaily,cnComChinafoods,cnComChinapower,cnComChinasmartgrid,cnComChinastock,cnComChinawuliu,cnComCpnn,cnComCreditcard,cnComCs,cnComCsGxnews,cnComDrcnet,cnComEeo,cnComEnorth,cnComFeedtrade,cnComFinancialnews,cnComJrj,cnComJxNews,cnComKailuan,cnComLinkshop,cnComMenet,cnComNbd,cnComNmgnews,cnComOcn,cnComOrangebank,cnComPeople,cnComPharmnet,cnComSdnews,cnComSlsdgc,cnComSyd,cnComTexnet,cnComTextIndex,cnComTnc,cnComYzdsb,cnCri,cnFund123,cnGovAgri,cnGovAh,cnGovBeijing,cnGovChinacoal,cnGovFjdpc,cnGovHengshui,cnGovHlj,cnGovJinan,cnGovJL,cnGovJseic,cnGovLaiwu,cnGovLn,cnGovMlr,cnGovMohurd,cnGovNmginvest,cnGovNxgy,cnGovPbc,cnGovQH,cnGovShaanxi,cnGovShaanxijs,cnGovShanghai,cnGovSheitc,cnGovSme,cnGovStatsSh,cnGovTaian,cnGovTj,cnGovZj,cnHinews,cnIresearch,cnJx,cnLangya,cnLfnews,cnMszz,cnNetBeinet,cnNetSimic,cnOpsteel,cnOrgCaam,cnOrgCec,cnOrgCinic,cnOrgCinicShanxi,cnOrgTreasurer,cnOrgZgcsjs,cnPedaily,cnPolymer,cnReadnet,cnSolarpvsources,cnSteelcn,cnWebTex,cnWorkercn,cnXinmin,cnYouth,cnYuqingcn,cnZyjjw,com100ppi,com163,com17ok,com21cbh,com21Cn,com2258,com24k99,com51credit,com591hx,com86chemnet,comAll2car,comAlu1886,comAnhuinews,comAskci,comBjcaac,comBmlink,comBuildhr,comCableabc,comCaijing,comCaixin,comCang,comCarnoc,comCcidcom,comCcidnet,comChina5e,comChinabyte,comChinahighway,comChinairn,comChinaNengyuan,comChinanews,comChinawutong,comChnrailway,comCm85,comCnfol,comCnStockFiler,comCnwest,comCnzicai,comCsteelnews,comCthy,comDonews,comDyhjw,comDzwww,comDzwww2,comEa3w,comEastday,comEastmoney,comEdai,comFang,comFangchan,comFccs,comFinanceun,comFlleasing,comFoods1,comFx678,comGasgoo,comGlinfo,comGuopeiwang,comGx12301,comH2ochina,comHc360,comHexun,comHouseSina,comHowbuy,comHunanjz,comHuxiu,comIbicn,comIfeng,comInvestjilin,comIqilu,comIresearch,comItfmag,comJfinfo,comJjmmw,comJnlc,comJschina,comLgmi,comMachine365,comMysteel,comNe21,comOfweek,comQhdnews,comQhea,comQhnews,comQianzhan,comQQ,comRzzlchina,comSdchina,comShenmou,comShfinancialnews,comSina,comSinotf,comSohu,comSootoo,comSouthmoney,comSpjxcn,comStcn,comStockstar,comSun21,comSxcoal,comTakungpao,comTbankw,comTexasia,comTianjinwe,comTrjcn,comWeiyangx,comWindosi,comWinshang,comXinhua08,comXinhuanet,comXinjr,comXyn365,comYcwb,comYicai,comYinhang,comYiyaojie,comYuanLin,comZgjcjs,comZgsyb,comZhgnj,comZhicheng,comZhijia,netChinagb,netChinavalue,netCqnews,netHainan,netLongHoo,netMushroommarket,netNj110,netNxNews,netP5w,netXichu,orgChmia,orgCngold,orgNewssc,orgShata,tvJnnews,baseFilter,afinanceContentFilter,beijingGovContentFilter,beiNetContentFilter,bjcaacContentFilter,bjxContentFilter,caamContentFilter,cableabcContentFilter,caijingContentFilter,caixinContentFilter,cangContentFilter,cbh21ContentFilter,ccidComContentFilter,ccidnetContentFilter,ce100ContentFilter,cebnetContentFilter,cecContentFilter,ceContentFilter,cetContentFilter,cfiContentFilter,chem99ContentFilter,china5eContentFilter,chinaccmContentFilter,chinacecaContentFilter,chinaContentFilter,chinafoodsContentFilter,chinaFundContentFilter,chinairnContentFilter,chinaisaContentFilter,chinanewsContentFilter,chinaPigContentFilter,chinaStockContentFilter,cinicContentFilter,cnfolContentFilter,cngoldContentFilter,cnrContentFilter,cnstockContentFilter,com163ContentFilter,com2258ContentFilter,com24k99ContentFilter,contentFilter,cqnewsContentFilter,credit51ContentFilter,csContentFilter,csteelnewsContentFilter,doNewsContentFilter,dongshihuiContentFilter,drcNetContentFilter,dzwwwContentFilter,eastmoneyContentFilter,ebrunContentFilter,food21ContentFilter,fund123ContentFilter,gasgooContentFilter,glassContentFilter,glinfoContentFilter,gold678ContentFilter,gspcGovContentFilter,hc360ContentFilter,hexunContentFilter,hnfgwGovContentFilter,hx591ContentFilter,ibicnContentFilter,ieforexContentFilter,ifengContentFilter,iresearchContentFilter,jnlcContentFilter,jqka10ContentFilter,jrjContentFilter,jsChinaContentFilter,lgmiContentFilter,linkShopContentFilter,machine365ContentFilter,mafengwoContentFilter,msnContentFilter,mushroommarketContentFilter,nenContentFilter,ocnContentFilter,ofweekContentFilter,opsteelContentFilter,orangebankContentFilter,p5wContentFilter,pbcContentFilter,peopleContentFilter,pharmnetContentFilter,ppi100ContentFilter,QQContentFilter,scdailyContentFilter,shenmouContentFilter,simicContentFilter,simuwangContentFilter,sinaContentFilter,sinotfContentFilter,smeGovContentFilter,souhuContentFilter,stockstarContentFilter,sun21ContentFilter,sxcoalContentFilter,takungpaoContentFilter,tbankwContentFilter,texNetContentFilter,tex_asiaContentFilter,treasurerContentFilter,trust_oneContentFilter,vocContentFilter,wangcaiwangContentFilter,winshangContentFilter,wtoutiaoContentFilter,xinhua08ContentFilter,xinhuanetContentFilter,xinjrContentFilter,xinminContentFilter,yicaiContentFilter,yinhangContentFilter,youthContentFilter,yuanlinContentFilter,yuqingcnContentFilter,zhijiaContentFilter,zhujiageContentFilter,buildhrNextPageFilter,cangNextPageFilter,ccidnetNextPageFilter,ceNextPageFilter,cfiNextPageFilter,cnrNextPageFilter,csNextPageFilter,financenunNextPageFilter,flleasingNextPageFilter,hexunNextPageFilter,langyaNextPageFilter,sinotfNextPageFilter,tianjinweNextPageFilter,yuanlinNextPageFilter,cinicTitleFilter,cnCnrcbTitle,cnGovAgriTitleFilter,cnGovFjdpcTitleFilter,cnGovHljTitleFilter,com24k99Title,comEastmoneyTitle,comFx678Title,comTakungpaoTitle,jseicTitleFilter,netNj110TitleFilter,orgChmiaTitleFilter,sheitcTitleFilter,smeGovTitle,afinanceTitleListFilter,beinetTitleListFilter,buildhrTitleListFilter,caamTitleListFilter,caijingTitleListFilter,caixinTitleListFilter,cbh21TitleListFilter,cbrcGovTitleListFilter,cbTitleListFilter,ceTitleListFilter,chinabondTitleListFilter,chinabyteTitleListFilter,chinairnTitleListFilter,chinastockTitleList,cinicTitleListFilter,cnCeWWWTitleListFilter,cnCfiTitleListFilter,cnComCebnetTitleListFilter,cnComChinafoodsTitleListFilter,cnComChinaTitleListFilter,cnComChinaTitleListFilter2,cnComCsTitleListFilter,cnComOcnTitleListFilter,cnComSinaTitleListFilter,cnComSlsdgcTitleListFilter,cnComTexnetTitleListFilter,cnComYzdsbTitleListFilter,cnCriTitleListFilter,cnExecunetTitleListFilter,cnfolTitleListFilter,cnGovAgriTitleListFilter,cnGovFjdpvTitleListFilter,cnGovHljTitleListFilter,cnJxTitleListFilter,cnPolymerTitleListFilter,cnSteelcnTitleListFilter,cnXinminTitleListFilter,cnYuqingcnTitleListFilter,cnZyjjwTitleListFilter,com21cbhTitleListFilter,com21sunTitleListFilter,com2258TitleListFilter,com86chemnetTitleListFilter,comAnhuinewsTitleListFilter,comBankHexun,comBmlinkTitleListFilter,comChinahighwayTitleListFilter,comChinanewsTitleListFilter,comChinaportsTitleListFilter,comCm85TitleListFilter,comCsteelnewsTitleListFilter,comCthyTitleListFilter,comEastmoneyTitleListFilter,comFccsTitleListFilter,comForexHexun,comGasgooTitleListFilter,comGlifoTitleListFilter,comH2oChinaTitleListFilter,comHc360TitleListFilter,comHowbuyTitleListFilter,comJfinfoTitleListFilter,comJnlcTitleListFilter,comOfweekTitleListFilter,comPeHexunTitleListFilter,comSinotfTitleListFilter,comSxcoalTitleListFilter,comTexasiaTitleListFilter,comWinshangTitleListFilter,comXinhua08TitleListFilter,comYicaiTitleListFilter,comZhijiaTitleListFilter,cpnnTitleListFilter,dzwwwTitleListFilter,ea3wTitleListFilter,feedtradeTitleListFilter,financialnewsTitleListFilter,fx678TitleListFilter,hc360TitleListFilter,hexunTitleListFilter,hljTitleListFilter,ifengTitleListFilter,iresearchTitleListFilter,jrjTitleListFilter,jschinaTitleListFilter,lhlqwTitleListFilter,mwrGovTitleListFilter,netCqnewsTitleListFilter,netMushroommarketTitleListFilter,netNj110TitleListFilter,netXichuTitleListFilter,nmginvestTitleListFilter,nmgnewsTitleListFilter,nongyeCeTitleListFilter,ok17TitleListFilter,orangebankTitleListFilter,orgChmiaTitleListFilter,p5wTitleListFilter,peopleTitleListFilter,qhnewsTitleListFilter,qhTitleListFilter,smeTitleListFilter,sydTitleListFilter,takungpaoTitleListFilter,trjcnTitleListFilter,xinhua08TitleListFilter,xinhuanetTitleListFilter,xinminTitleListFilter,youthTitleListFilter,zjGovTitleListFilter,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,v,com.unbank.robotspider.action.model.normal.SpringContextUtil#0,unbankQuartzByTimeCrawler,startCrawlQuartzJobBean,startCrawlQuartzJobTask,startCrawlQuartzTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+2017-03-20 15:03:36 <# org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:60)> INFO  [3710]:
+Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-03-20 15:03:36 <# org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:222)> INFO  [3712]:
+Quartz Scheduler v.1.8.4 created.
+2017-03-20 15:03:36 <# org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:139)> INFO  [3714]:
+RAMJobStore initialized.
+2017-03-20 15:03:36 <# org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:244)> INFO  [3715]:
+Scheduler meta-data: Quartz Scheduler (v1.8.4) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-03-20 15:03:36 <# org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1280)> INFO  [3716]:
+Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-03-20 15:03:36 <# org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1284)> INFO  [3716]:
+Quartz scheduler version: 1.8.4
+2017-03-20 15:03:36 <# org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2246)> INFO  [3718]:
+JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1f9f6368
+2017-03-20 15:03:36 <# org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:330)> INFO  [3729]:
+Starting beans in phase 2147483647
+2017-03-20 15:03:36 <# org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:650)> INFO  [3729]:
+Starting Quartz Scheduler now
+2017-03-20 15:03:36 <# org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:500)> INFO  [3729]:
+Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-03-20 15:03:38 <# org.quartz.utils.UpdateChecker.doCheck(UpdateChecker.java:86)> INFO  [5391]:
+New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+2017-03-20 15:05:02 <# com.unbank.robotspider.store.WebSiteInfoReader.getWebSiteInfoByTask(WebSiteInfoReader.java:93)> INFO  [88962]:
+
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ubk_platform_2015'
+### The error may exist in com/unbank/robotspider/dao/WebSiteInfoMapper.xml
+### The error may involve com.unbank.robotspider.dao.WebSiteInfoMapper.selectByExample
+### The error occurred while executing a query
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ubk_platform_2015'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy6.selectByExample(Unknown Source)
+	at com.unbank.robotspider.store.WebSiteInfoReader.getWebSiteInfoByTask(WebSiteInfoReader.java:91)
+	at com.unbank.robotspider.worker.WebSiteInfoProductor.getWebSiteInfoByTask(WebSiteInfoProductor.java:21)
+	at com.unbank.robotspider.processor.WebsiteInfoQuartzByTimeWorkShop.fillQueue(WebsiteInfoQuartzByTimeWorkShop.java:37)
+	at com.unbank.robotspider.processor.WebsiteInfoQuartzByTimeWorkShop.run(WebsiteInfoQuartzByTimeWorkShop.java:29)
+	at com.unbank.robotspider.UnbankQuartzByTimeCrawler.start(UnbankQuartzByTimeCrawler.java:61)
+	at com.unbank.quartz.StartCrawlQuartzJobBeanQuartzJobBean.executeInternal(StartCrawlQuartzJobBeanQuartzJobBean.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:273)
+	at org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean$MethodInvokingJob.executeInternal(MethodInvokingJobDetailFactoryBean.java:264)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:86)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:549)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ubk_platform_2015'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4190)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4122)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:927)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1709)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1252)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2519)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2304)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:346)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:195)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:190)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:92)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:375)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:84)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:134)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:279)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:72)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 20 more
+2017-03-20 15:05:02 <# com.unbank.robotspider.processor.WebsiteInfoQuartzByTimeWorkShop.run(WebsiteInfoQuartzByTimeWorkShop.java:31)> INFO  [88968]:
+
+java.lang.NullPointerException
+	at com.unbank.robotspider.processor.WebsiteInfoQuartzByTimeWorkShop.fillQueue(WebsiteInfoQuartzByTimeWorkShop.java:38)
+	at com.unbank.robotspider.processor.WebsiteInfoQuartzByTimeWorkShop.run(WebsiteInfoQuartzByTimeWorkShop.java:29)
+	at com.unbank.robotspider.UnbankQuartzByTimeCrawler.start(UnbankQuartzByTimeCrawler.java:61)
+	at com.unbank.quartz.StartCrawlQuartzJobBeanQuartzJobBean.executeInternal(StartCrawlQuartzJobBeanQuartzJobBean.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.util.MethodInvoker.invoke(MethodInvoker.java:273)
+	at org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean$MethodInvokingJob.executeInternal(MethodInvokingJobDetailFactoryBean.java:264)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:86)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:549)
