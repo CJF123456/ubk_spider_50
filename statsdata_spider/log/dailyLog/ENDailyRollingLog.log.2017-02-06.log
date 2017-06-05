@@ -1,0 +1,8 @@
+2017-02-06 09:48:41 <# com.unbank.task.StatsHgydSpider.<clinit>(StatsHgydSpider.java:13)> INFO  [0]:
+---日志系统启动成功---
+2017-02-06 10:40:07 <# com.unbank.task.StatsHgydSpider.<clinit>(StatsHgydSpider.java:21)> INFO  [0]:
+---日志系统启动成功---
+2017-02-06 10:40:07 <# com.unbank.task.StatsHgydSpider.main(StatsHgydSpider.java:28)> INFO  [2]:
+宏观月度数据采集开始
+2017-02-06 10:40:08 <# com.unbank.task.StatsHgydSpider.main(StatsHgydSpider.java:37)> INFO  [133]:
+宏观月度数据采集结束
