@@ -14,6 +14,7 @@ import com.unbank.process.ResouceConsume;
 
 public class Spider {
 
+	
 	private static Log logger = LogFactory.getLog(Spider.class);
 
 	static {
