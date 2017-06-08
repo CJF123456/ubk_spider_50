@@ -138,7 +138,7 @@
 							<div class="post-url">
 								<p class="post-down "
 									style=" text-shadow: 1px 1px 1px #a2a2a200;">
-									源码下载: <a class="" href="">${news.url}</a>
+									源码下载: <a  target="_blank" class="down" href="${news.url}">${news.url}</a>
 								</p>
 							</div>
 							<div class="pull-left tag-list" class="fa fa-folder-open-o">
