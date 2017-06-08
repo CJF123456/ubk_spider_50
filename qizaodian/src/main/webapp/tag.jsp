@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>起早点爬虫-词云</title>
+<title>起早点爬虫-标签云</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="Qizaodian-全网首家最系统的java爬虫视频网站" />
 <meta name="keywords"
