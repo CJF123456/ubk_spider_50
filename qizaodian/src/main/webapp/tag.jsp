@@ -78,6 +78,7 @@
 								<c:forEach items="${tag}" var="tag">
 									<a href="javascript:void(0)" onclick="test(${tag.id});">${tag.tagname}</a>
 								</c:forEach>
+								
 							</div>
 						</section>
 					</article>
