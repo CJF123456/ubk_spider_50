@@ -20,10 +20,30 @@
 <meta name="keywords"
 	content="java爬虫,爬虫,起早点,起早点爬虫,java爬虫视频,webmagic,java爬虫教程">
 <link rel="stylesheet"
-	href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css?v=<%=System.currentTimeMillis()%>"/>
-<link rel="stylesheet" href="./css/bootstrap.min.css?v=<%=System.currentTimeMillis()%>"/>
-<link rel="stylesheet" type="text/css" href="./css/screen.css?v=<%=System.currentTimeMillis()%>"/>
-<link rel="stylesheet" type="text/css" href="./css/footer2.css?v=<%=System.currentTimeMillis()%>"/>
+	href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css?v=<%=System.currentTimeMillis()%>" />
+<link rel="stylesheet"
+	href="./css/bootstrap.min.css?v=<%=System.currentTimeMillis()%>" />
+<link rel="stylesheet" type="text/css"
+	href="./css/screen.css?v=<%=System.currentTimeMillis()%>" />
+<link rel="stylesheet" type="text/css"
+	href="./css/footer2.css?v=<%=System.currentTimeMillis()%>" />
+<script type="text/javascript">
+	function abc(index, newsId) {
+		$("#abc" + index).text($("#abc" + index).text() * 1 + 1);
+		/* alert(newsId); */
+		$.ajax({
+			type : "post",
+			url : "updatepraise.do",
+			data : {
+				"id" : newsId,
+				"praise" : $("#abc" + index).text()
+			},
+			dataType : "json",
+			success : function(msg) {}
+		});
+	}
+</script>
+
 </head>
 <body class="home-template">
 	<!-- start header -->
@@ -86,7 +106,7 @@
 		<div class="container">
 			<div class="row">
 				<main class="col-md-8 main-content">
-					<c:forEach items="${newsList}" var="news">
+					<c:forEach items="${newsList}" var="news" varStatus="ind">
 						<article class="post">
 
 							<div class="post-head">
@@ -96,7 +116,9 @@
 								<div class="post-meta">
 									<span class="author">作者：<a>CJF</a></span> •
 									<time class="post-date" title=" ${news.pubdate}">
-										<fmt:formatDate value="${news.pubdate}" pattern="yyyy-MM-dd" type="date" /></time>
+										<fmt:formatDate value="${news.pubdate}" pattern="yyyy-MM-dd"
+											type="date" />
+									</time>
 								</div>
 							</div>
 							<div class="featured-media">
@@ -108,7 +130,10 @@
 							</div>
 							<div class="post-permalink">
 								<a href="/qizaodian/readerShowTextById.do?id=${news.id}"
-									class="btn btn-default">阅读全文</a>
+									class="btn btn-default">阅读全文</a> <a id="thumbs-up"
+									class="fa fa-thumbs-up" href="javascript:;"
+									onclick="abc(${ind.index},${news.id});" class="btn btn-default"><span
+									class="thumbs" id="abc${ind.index }">&nbsp;${news.praise}</span></a>
 							</div>
 							<div class="post-url">
 								<p class="post-down "
@@ -134,24 +159,24 @@
 					</c:forEach>
 					<c:if test="${single==1}">
 						<nav class="pagination" role="navigation">
-						
+
 							<a class="older-posts"
-									href="/qizaodian/readShowTitles.do?pageNo=${page.pageNo-1}">
-									<c:if test="${page.pageNo>1}">
-										<i class="fa fa-angle-left"></i>
-									</c:if>
-								</a> <span class="page-number">第 ${page.pageNo} 页 ⁄ 共
-									${page.pageCount}页</span> <a class="older-posts"
-									href="/qizaodian/readShowTitles.do?pageNo=${page.pageNo+1}">
-									<c:if test="${page.pageCount>page.pageNo}">
-										<i class="fa fa-angle-right" id="next"></i>
-									</c:if>
-								</a>
-							
+								href="/qizaodian/readShowTitles.do?pageNo=${page.pageNo-1}">
+								<c:if test="${page.pageNo>1}">
+									<i class="fa fa-angle-left"></i>
+								</c:if>
+							</a> <span class="page-number">第 ${page.pageNo} 页 ⁄ 共
+								${page.pageCount}页</span> <a class="older-posts"
+								href="/qizaodian/readShowTitles.do?pageNo=${page.pageNo+1}">
+								<c:if test="${page.pageCount>page.pageNo}">
+									<i class="fa fa-angle-right" id="next"></i>
+								</c:if>
+							</a>
+
 						</nav>
 					</c:if>
-						
-					
+
+
 				</main>
 				<aside class="col-md-4 sidebar">
 					<jsp:include page="rightqu.jsp" />
@@ -221,12 +246,17 @@
 
 
 
-	<script src="./js/jquery.min.js?v=<%=System.currentTimeMillis()%>" type="text/javascript"></script>
-	<script src="./js/bootstrap.min.js?v=<%=System.currentTimeMillis()%>" type="text/javascript"></script>
-	<script src="./js/tag.js?v=<%=System.currentTimeMillis()%>" type="text/javascript"></script>
+	<script src="./js/jquery.min.js?v=<%=System.currentTimeMillis()%>"
+		type="text/javascript"></script>
+	<script src="./js/bootstrap.min.js?v=<%=System.currentTimeMillis()%>"
+		type="text/javascript"></script>
+	<script src="./js/tag.js?v=<%=System.currentTimeMillis()%>"
+		type="text/javascript"></script>
 	<!-- <script src="./js/poetry.js" type="text/javascript"></script> -->
-	<script src="./js/top.js?v=<%=System.currentTimeMillis()%>" type="text/javascript"></script>
-	<script src="./js/baidu.js?v=<%=System.currentTimeMillis()%>" type="text/javascript"></script>
+	<script src="./js/top.js?v=<%=System.currentTimeMillis()%>"
+		type="text/javascript"></script>
+	<script src="./js/baidu.js?v=<%=System.currentTimeMillis()%>"
+		type="text/javascript"></script>
 
 
 

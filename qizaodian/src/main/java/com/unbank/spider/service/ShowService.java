@@ -59,6 +59,8 @@ public interface ShowService {
 	//通过ID获取诗词标题
 	List<ShowPoetry> readShowPoetryById(Integer id);
 
+	int updatePraise(Integer id, Integer praise);
+
 	
 
 }

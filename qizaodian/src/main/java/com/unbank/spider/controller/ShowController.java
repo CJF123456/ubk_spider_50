@@ -229,5 +229,13 @@ public class ShowController extends CommonController {
 		model.addAttribute("url", url);
 		return "/poetrydetail";
 	}
-
+	
+	
+	//获取赞并更新
+		@RequestMapping(value = "updatepraise")
+		public void updatePraise(HttpServletResponse response, HttpSession session, Integer id,Integer praise) {
+		int prid=	service.updatePraise(id,praise);
+		if (prid>0) {
+		}
+		}
 }

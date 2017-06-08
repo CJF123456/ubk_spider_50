@@ -132,4 +132,13 @@ public class ShowServiceImpl implements ShowService {
 		return showPoetryMapper.selectByExample(example);
 	}
 
+	@Override
+	public int updatePraise(Integer id, Integer praise) {
+		
+		ShowTitle st = new ShowTitle();
+		st.setId(id);
+		st.setPraise(praise);
+		return showTitleMapper.updateByPrimaryKeySelective(st);
+	}
+
 }
